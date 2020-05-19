@@ -16,9 +16,24 @@
         "anchors",
         "github",
         "github-buttons",
-        "donate",
         "sharing-plus",
         "anchor-navigation-ex",
         "favicon"
-    ]
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/talkxin/flutter_independently"
+        },
+        "github-buttons": {
+            "buttons": [
+                {
+                    "user": "Blankj",
+                    "repo": "glory",
+                    "type": "star",
+                    "size": "small",
+                    "count": true
+                }
+            ]
+        }
+    }
 }
