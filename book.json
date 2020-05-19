@@ -1,0 +1,24 @@
+{
+    "title": "Flutter自学轨迹",
+    "author": "Paul young",
+    "description": "flutter 自学路径与项目实战",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "links": {
+        "sidebar": {
+            "Flutter实战": "https://book.flutterchina.club/chapter14/element_buildcontext.html",
+            "Flutter入门": "https://zhuanlan.zhihu.com/p/90836859"
+        }
+    },
+    "plugins": [
+        "splitter",
+        "expandable-chapters-small",
+        "anchors",
+        "github",
+        "github-buttons",
+        "donate",
+        "sharing-plus",
+        "anchor-navigation-ex",
+        "favicon"
+    ]
+}
