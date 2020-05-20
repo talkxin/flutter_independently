@@ -29,17 +29,18 @@
 2、在左侧项目导航器中选择Runner项目并在弹出的界面中，选择General选项卡:
 
 
->Identity部分：
+#### Identity部分：
+
 - `Display Name`:要在主屏幕和其他地方显示的应用程序的名称
 - `Bundle Identifier`:您在iTunes Connect上注册的App ID.
 
 
->Signing 部分:
+#### Signing 部分:
 - `Automatically manage signing`:Xcode是否应该自动管理应用程序签名和生成。默认设置为true，对大多数应用程序来说应该足够了。
 - `Team`:选择与您注册的Apple Developer帐户关联的团队。如果需要，请选择Add Account…，然后更新此设置
 
 
->Deployment Info 部分:
+#### Deployment Info 部分:
 - `Deployment Target`:您的应用将支持的最低iOS版本。Flutter支持iOS 8.0及更高版本。如果您的应用程序包含使用iOS 8中不可用的API的Objective-C或Swift代码，请适当更新此设置。
 
 

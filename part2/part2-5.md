@@ -4,8 +4,10 @@
 >`pubspec.yaml`是Flutter项目的核心配置文件，类似于Android项目中的build.gradle配置文件.
 
 
-1. 配置文件示例如下：
-```
+#### 配置文件示例如下：
+
+
+```shell
 # 项目名称，必填字端
 name: newtify
 
