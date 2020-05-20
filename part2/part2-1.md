@@ -30,10 +30,11 @@ pub get failed (1; So, because flutter_view depends on meta 1.1.8, version solvi
 ### 工程目录结构
 
 
-- 打开项目时可以看到如下工程目录结构，结构如下：
+打开项目时可以看到如下工程目录结构，结构如下：
 
 
 ```
+
 ├── README.md           --项目说明文件
 ├── android             --编译Android项目的源码工程路径
 ├── ios                 --编译IOS项目的源码工程路径
@@ -42,4 +43,5 @@ pub get failed (1; So, because flutter_view depends on meta 1.1.8, version solvi
 │   └── main.dart       --默认main入口
 ├── pubspec.lock        --根据当前项目依赖所生成的文件，记录了当前使用的库的依赖版本
 └── pubspec.yaml        --Flutter项目的核心配置文件
+
 ```
