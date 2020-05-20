@@ -13,7 +13,9 @@
    - Widget实际上就是Element的配置数据，Widget实际上是一个配置树，真正的UI渲染实际上是Element来构成，也就是类似于，一个Activity的一个layout，layout同时承载了不同的组件，而这些组件就好比是Element，实际渲染也是由这些组件来进行；不过由于Element是通过widget生成的，所以他们之间有对应关系，在大多数场景，我们可以宽泛的认为widget树就是ui控件树或渲染树。
    - 一个widget对象可以对应多个Element对象。就像layout可以同时承载多个组件一样。
 3. Widget主要接口
-```
+
+
+```dart
 abstract class Widget extends DiagnosticableTree {
   const Widget({ this.key });
 
@@ -66,6 +68,7 @@ widget类本身是一个抽象类，其中最核心的就是定义了`createElem
 
 
 实例如下：
+
 ```dart
 class Echo extends StatelessWidget {
   const Echo({
