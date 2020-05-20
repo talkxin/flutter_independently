@@ -241,7 +241,7 @@ toStringDeep ，从该点返回整个子树的多行描述。已一些具有详�
 例如：
 
 
-```
+```dart
 import 'package:flutter/material.dart';
 void main() {
   runApp(
@@ -328,7 +328,7 @@ $ flutter run --trace-startup --profile
 
 
 如：
-```
+```dart
     {
         "engineEnterTimestampMicros":96025565262, 
         "timeToFirstFrameMicros": 2171978,
@@ -347,7 +347,7 @@ $ flutter run --trace-startup --profile
 使用 dart:developer 的Timeline工具来包含你想测试的代码块，例如:
 
 
-```
+```dart
 Timeline.startSync('interesting function'); 
 // iWonderHowLongThisTakes(); 
 Timeline.finishSync();
