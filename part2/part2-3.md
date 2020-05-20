@@ -17,7 +17,8 @@
 
 
 - 在单元测试用例文件中，导入相关依赖：
-```
+
+```dart
     import "package:test/test.dart";
 ```
 
@@ -28,23 +29,25 @@
 dart单元测试主要集中使用三个函数来进行：
 
 
-- `test()`顶级函数：用于指定测试。语法如下：
-```
+- `test()`顶级函数：用于指定测试。语法如下：<br/>
+  
+```dart
 test("Description of the test ", () { 
 });
 ```
 
 
-- `expect()`断言测试函数：用户测试程序断言，参数值等。语法如下：
-```
+- `expect()`断言测试函数：用户测试程序断言，参数值等。语法如下：<br/>
+  
+```dart
 test("Description of the test ", () {  
    expect(actualValue , matchingValue);
 });
-
-
 ```
-- `group()`分组测试函数：可用于对测试进行分组，每个组的描述都会添加到测试描述的开头。使用该函数可以对测试用例进行分组，以便为测试代码添加更多含义。如果有许多测试用例，这有助于编写更清晰的代码。语法如下：
-```
+
+- `group()`分组测试函数：可用于对测试进行分组，每个组的描述都会添加到测试描述的开头。使用该函数可以对测试用例进行分组，以便为测试代码添加更多含义。如果有许多测试用例，这有助于编写更清晰的代码。语法如下：<br/>
+
+```dart
 group("some_Group_Name", () { 
    test("test_name_1", () { 
       expect(actual, equals(exptected)); 
@@ -61,7 +64,7 @@ group("some_Group_Name", () {
 以下示例定义方法`Add()`，此方法采用两个整数值并返回表示总和的整数。演示使用`expect()`来强制执行断言测试。
 
 
-```
+```dart
 import 'package:test/test.dart';      
 // Import the test package 
 
@@ -89,6 +92,7 @@ void main() {
 
 
 执行得到结果如下：
+
 ```
 00:00 +0: test to check add method 
 00:00 +1: All tests passed!
@@ -101,7 +105,7 @@ void main() {
 下面定义的`subtract()`方法存在逻辑错误，下面将测试验证。
 
 
-```
+```dart
 import 'package:test/test.dart'; 
 int Add(int x,int y){ 
    return x+y; 
@@ -136,7 +140,9 @@ void main(){
    }); 
 }
 ```
+
 输出结果，函数`add()`的测试用例通过，但`subtract()`的测试失败，如下所示。
+
 ```
 00:00 +0: test to check sub 
 00:00 +0 -1: test to check sub 
@@ -160,8 +166,10 @@ Dummy exception to set exit code.
 
 
 ### 示例3：分组测试
+
 为`split()`函数和`trim()`函数编写测试用例。因此在逻辑上将这些测试用例分组并为字符串。
-```
+
+```dart
 import "package:test/test.dart"; 
 void main() { 
    group("String", () { 
@@ -176,7 +184,9 @@ void main() {
    }); 
 }
 ```
+
 输出结果如下：
+
 ```
 00:00 +0: String test on split() method of string class 
 00:00 +1: String test on trim() method of string class 
