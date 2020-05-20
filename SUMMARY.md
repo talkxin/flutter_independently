@@ -11,6 +11,8 @@
   * [运行实例](part2/part2-2.md)
   * [项目测试](part2/part2-3.md)
   * [打包与输出](part2/part2-4.md)
+  * [pubspec.yaml详解](part2/part2-5.md)
+  * [搭建私人flutter仓库](part2/part2-6.md)
 * [第三章 Flutter 核心原理](part3/README.md)
   * [Flutter UI系统](part3/part3-1.md)
   * [Widget简介](part3/part3-2.md)
