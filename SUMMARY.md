@@ -1,6 +1,9 @@
 # Summary
 
 * [前言](README.md)
+
+---
+
 * [第一章 开发环境搭建](part1/README.md)
   * [1.1 dart开发环境](part1/part1-1.md)
   * [1.2 flutter开发环境](part1/part1-2.md)
@@ -16,7 +19,7 @@
 * [第三章 Flutter 核心原理](part3/README.md)
   * [3.1 Flutter UI系统](part3/part3-1.md)
   * [3.2 Widget简介](part3/part3-2.md)
-  * [3.3 生命周期]()
+  * [3.3 生命周期](part3/part3-3.md)
   * [3.4 路由管理]()
   * [3.5 状态管理]()
 * [第四章 页面布局]()
@@ -50,4 +53,7 @@
   * [9.3 flutter与Android原生之间调用]()
   * [9.4 flutter与objectc之间调用]()
 * [第十章国际化]()
+
+---
+
 * [附件:实际案例]()

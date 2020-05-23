@@ -18,7 +18,8 @@
         "github-buttons",
         "sharing-plus",
         "anchor-navigation-ex",
-        "favicon"
+        "favicon",
+        "plantuml"
     ],
     "pluginsConfig": {
         "github": {
