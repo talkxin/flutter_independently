@@ -1,0 +1,19 @@
+```UML
+@startuml
+:StatefulWidget
+launched;
+:initState;
+:didChangeDependencies;
+if (hot reload?) then (yes)
+    :reassemble;
+    :didUpdateWidget;
+else(no)
+    :didUpdateWidget;
+endif
+:build;
+:deactivate;
+:dispose;
+:StatefulWidget
+destroyed;
+@enduml
+```
