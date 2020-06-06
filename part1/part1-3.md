@@ -1,20 +1,20 @@
-## vscode的配置与使用
+## vscode 的配置与使用
 
 ### 安装插件
 
-1. 安装flutter，dart插件
+1. 安装 flutter，dart 插件
 
-2. 安装Android sdk，模拟器
+2. 安装 Android sdk，模拟器
 
-3. 重启vscode
+3. 重启 vscode
 
 ### 创建应用
 
-1. 调用command，输入`Flutter：New Project`，输入项目名称
+1. 调用 command，输入`Flutter：New Project`，输入项目名称
 
 2. 指定项目位置，确定，即开始进行项目创建
 
-3. 创建完成，显示main.dart
+3. 创建完成，显示 main.dart
 
 ### 设置热重载
 

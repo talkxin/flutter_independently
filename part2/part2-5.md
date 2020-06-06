@@ -1,11 +1,8 @@
-## pubspec.yaml配置文件详解
+## pubspec.yaml 配置文件详解
 
-
->`pubspec.yaml`是Flutter项目的核心配置文件，类似于Android项目中的build.gradle配置文件.
-
+> `pubspec.yaml`是 Flutter 项目的核心配置文件，类似于 Android 项目中的 build.gradle 配置文件.
 
 #### 配置文件示例如下：
-
 
 ```shell
 # 项目名称，必填字端
@@ -49,7 +46,7 @@ issue_tracker: https://github.com/<user>/<repository>/issues
 # 项目的第三方插件依赖，在这个标签中列出了该项目正常工作所需的每一个软件包与版本。以下通过实例详解该标签的详情
 dependencies:
   # 实例1 直接写明约束版本，若该插件是发布在https://pub.dev/ 之上，IDE会直接在项目目录下执行`flutter packages get`来下载其插件的最新版本
-  transmogrify: 
+  transmogrify:
   # 实例2 该插件是在实例1的基础上进行延伸，其中`^1.4.0`的含义是约束了版本号，也就是在该项目中，需要使用1.4.0版本
   transmogrify: ^1.4.0
   #实例3 若该插件未部署在pub.dev之上，则可以通过URL来指定出插件下载的源
