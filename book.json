@@ -1,40 +1,41 @@
 {
-    "title": "Flutter自学轨迹",
-    "author": "Paul young",
-    "description": "flutter 自学路径与项目实战",
-    "language": "zh-hans",
-    "gitbook": "3.2.3",
-    "links": {
-        "sidebar": {
-            "Flutter实战": "https://book.flutterchina.club/chapter14/element_buildcontext.html",
-            "Flutter入门": "https://zhuanlan.zhihu.com/p/90836859"
-        }
-    },
-    "plugins": [
-        "splitter",
-        "expandable-chapters-small",
-        "anchors",
-        "github",
-        "github-buttons",
-        "sharing-plus",
-        "anchor-navigation-ex",
-        "favicon",
-        "plantuml"
-    ],
-    "pluginsConfig": {
-        "github": {
-            "url": "https://github.com/talkxin/flutter_independently"
-        },
-        "github-buttons": {
-            "buttons": [
-                {
-                    "user": "talkxin",
-                    "repo": "flutter_independently",
-                    "type": "star",
-                    "size": "small",
-                    "count": true
-                }
-            ]
-        }
+  "title": "Flutter自学轨迹",
+  "author": "Paul young",
+  "description": "flutter 自学路径与项目实战",
+  "language": "zh-hans",
+  "gitbook": "3.2.3",
+  "links": {
+    "sidebar": {
+      "Flutter实战": "https://book.flutterchina.club/chapter14/element_buildcontext.html",
+      "Flutter入门": "https://zhuanlan.zhihu.com/p/90836859",
+      "Flutter核心原理Widget": "https://www.jianshu.com/p/65924a115fcf"
     }
+  },
+  "plugins": [
+    "splitter",
+    "expandable-chapters-small",
+    "anchors",
+    "github",
+    "github-buttons",
+    "sharing-plus",
+    "anchor-navigation-ex",
+    "favicon",
+    "plantuml"
+  ],
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/talkxin/flutter_independently"
+    },
+    "github-buttons": {
+      "buttons": [
+        {
+          "user": "talkxin",
+          "repo": "flutter_independently",
+          "type": "star",
+          "size": "small",
+          "count": true
+        }
+      ]
+    }
+  }
 }
