@@ -8,7 +8,7 @@
   * [dart开发环境](part0/part1-1.md)
   * [flutter开发环境](part0/part1-2.md)
   * [开发工具](part0/part1-3.md)
-* [第一章 dart语言语法详解](part1/README.md)
+* [第一章 dart语言语法详解](part1/part1-1.md)
   * [1.1 dart基础语法](part1/part1-1.md)
   * [1.2 dart的函数与类](part1/part1-2.md)
   * [1.3 dart的库管理](part1/part1-3.md)
