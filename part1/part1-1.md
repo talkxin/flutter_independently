@@ -44,22 +44,24 @@ dart 的注释同众多脚本语言一样，如下几种注释的方式：
 
 ```UML
 @startuml
-state dart内置数据类型 {
-  [*] --> 数字
-  数字 : int
-  数字 : double
-  [*] --> 字符串
-  字符串 : String
-  [*] --> 布尔值
-  布尔值 : Bool
-  [*] --> 列表
-  列表 : List
-  [*] --> 映射
-  映射 : Map
-  [*] --> var
-  [*] --> dynamic
-  [*] --> Object
-}
+dart内置数据类型 --|> 数字
+dart内置数据类型 --|> 字符串
+dart内置数据类型 --|> 布尔值
+dart内置数据类型 --|> 列表
+dart内置数据类型 --|> 映射
+dart内置数据类型 --|> 默认对象类型
+
+
+数字 : int
+数字 : double
+字符串 : String
+布尔值 : bool
+列表 : List
+映射 : Map
+默认对象类型 : var
+默认对象类型 : dynamic
+默认对象类型 : Object
+@enduml
 ```
 
 内置数据类型
