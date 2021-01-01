@@ -107,7 +107,7 @@ print(test2);// 输出2
 
 Object test3 = 3；
 test3 = "hello";
-print(test3);//输出3
+print(test3);//输出hello 
 ```
 
 常量的定义
@@ -347,3 +347,32 @@ myMap.forEach((key, value) => print("$key : $value"));
 ```
 
 ### 七、错误拦截与处理
+
+在dart中错误处理方式如Java类似，分为三种情况：
+
+```dart
+try {
+  test();
+} on NullPoingtException {
+  // 一个具体异常
+  print("the exception is NullPoingtException");
+} on Exception catch (e) {
+  // 任意一个异常
+  print('Unknown exception: $e');
+} catch (e) {
+  // 非具体类型
+  print('Something really unknown: $e');
+}finally {
+  // 即使抛出一个异常时也会进
+  print("this is finally");
+}
+```
+
+其中如果cache当前代码块不处理，则可以通过使用`rethrow`将错误传递下去。
+
+列举几个常见错误类型：
+- DeferredLoadException 延迟库无法加载
+- FormatException 数据类型转换异常,或解析异常
+- IntegerDivisionByZeroException 数字除以零
+- IOException IO流异常
+- NullPoingtException 空指针异常
