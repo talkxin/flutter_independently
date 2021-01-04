@@ -11,7 +11,7 @@
 * [第一章 dart语言语法详解](part1/part1-1.md)
   * [1.1 dart基础语法](part1/part1-1.md)
   * [1.2 dart的函数与类](part1/part1-2.md)
-  * [1.3 dart的库管理](part1/part1-3.md)
+  * [1.3 dart的进阶使用](part1/part1-3.md)
 * [第二章 Flutter 项目结构](part2/README.md)
   * [2.1 第一个实例](part2/part2-1.md)
   * [2.2 运行实例](part2/part2-2.md)
