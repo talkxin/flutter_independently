@@ -11,9 +11,6 @@
       "Flutter核心原理Widget": "https://www.jianshu.com/p/65924a115fcf"
     }
   },
-  "theme-default": {
-    "showLevel": true
-  },
   "plugins": [
     "splitter",
     "expandable-chapters-small",
@@ -21,7 +18,6 @@
     "github",
     "github-buttons",
     "sharing-plus",
-    "anchor-navigation-ex",
     "favicon",
     "plantuml"
   ],
@@ -39,6 +35,9 @@
           "count": true
         }
       ]
+    },
+    "theme-default": {
+      "showLevel": false
     }
   }
 }

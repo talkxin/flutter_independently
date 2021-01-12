@@ -129,6 +129,7 @@ class Test{
 var test=new Test();
 Test test1=new Test();
 ```
+> 在dart中实例化对象时`new`关键字不是必须的，可以省略不写。
 
 在 dart 中没有 Java 中类定义的诸如`public`,`private`多种访问修饰符，在 dart 中是通过对函数的命名来控制其内部变量的访问作用域，在 dart 中只有两种，公开与私有。
 
@@ -187,3 +188,4 @@ import 'lib/test.dart' deferred as hello;
 // 当我们的程序运行到该句柄时，才会去加载test.dart库
 hello.loadLibrary();
 ```
+
