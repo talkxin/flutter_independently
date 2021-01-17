@@ -18,9 +18,17 @@
     "github",
     "github-buttons",
     "favicon",
-    "plantuml"
+    "plantuml",
+    "expandable-chapters",
+    "chapter-fold",
+    "page-treeview"
   ],
   "pluginsConfig": {
+    "page-treeview": {
+      "copyright": "Copyright &#169; aleen42",
+      "minHeaderCount": "2",
+      "minHeaderDeep": "2"
+    },
     "github": {
       "url": "https://github.com/talkxin/flutter_independently"
     },

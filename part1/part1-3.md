@@ -73,7 +73,7 @@ void main(){
 ```
 
 **构造方法重定向**
-在 dart 中可以通过重定向来定向到一个构造方法，类似于 Java 中的 super
+在 dart 中可以通过重定向来定向到一个构造方法
 
 ```dart
 class Test{
@@ -248,8 +248,202 @@ void main() {
 
 ### 类的继承与接口
 
+在 dart 中使用子类继承父类，其与 Java 中相似，均使用`extends`关键字来继承父类，同时，与 Java 相同，均可以使用`super`关键字来引用父类，但与 Java 不同的是，在 Java 中，一个子类只能继承与一个父类，而在 dart 中可以实现多重继承；要使用多重继承则需要使用到`with`关键字。
+
+```dart
+class Father1 {
+  void funcA() {
+    print("funcA");
+  }
+
+  void common() {
+    print("init Father1");
+  }
+}
+
+class Father2 {
+  void funcB() {
+    print("funcB");
+  }
+
+  void common() {
+    print("init Father2");
+  }
+}
+
+class Father3 {
+  void funcC() {
+    print("funcC");
+  }
+
+  void common() {
+    print("init Father3");
+  }
+}
+
+/// 单继承
+class Son1 extends Father1 {
+  void funcA() {
+    super.funcA();
+  }
+}
+
+class Son2 extends Father1 with Father2, Father3 {}
+
+// 也可以直接使用with，其作用同等于Son2
+class Son3 with Father3, Father2, Father1 {}
+
+void main() {
+  Son1 s1 = Son1();
+  s1.funcA(); //输出funcA
+  Son2 s2 = Son2();
+  s2.funcA(); //输出funcA
+  s2.funcB(); //输出funcB
+  s2.funcC(); //输出funcC
+  s2.common(); //输出init Father3，父类中的同名方法只能调用到顺位最后一个。
+  Son3 s3 = Son3();
+  s3.funcA(); //输出funcA
+  s3.funcB(); //输出funcB
+  s3.funcC(); //输出funcC
+  s3.common(); //输出init Father1
+}
+```
+
+### 抽象类
+
+**抽象类**
+在 dart 中不包含接口的定义，抽象类整合了在 Java 中的接口与抽象类的能力，均使用`abstract`关键字来修饰
+
+```dart
+abstract class Base {
+  // 省略函数体即可定义抽象方法，不需加关键字
+  func1();
+  // 也可以按照标准方式来定义抽象函数
+  int func2();
+}
+
+/// 抽象子类可以继承抽象父类，与Java中特性相同
+abstract class Base2 with Base {}
+
+/// 一个实体类继承抽象类，则需要实现抽象方法
+class Test with Base {
+  @override
+  func1() {
+    print("123");
+  }
+
+  @override
+  int func2() {
+    return 112;
+  }
+}
+
+void main() {
+  var test = Test();
+  test.func1();
+  print(test.func2());
+}
+```
+
+**接口**
+在 dart 中抽象类包含了接口的能力，我们可以使用`implements`关键字来进行接口的实现
+
+> 在 dart 中，每个类都隐式的定义了一个包含所有实例成员的接口，也就是说，在 dart 中一个实体类也可以当做一个接口类来被实现
+
+```dart
+abstract class Base {
+  funcAbstract();
+}
+
+class Base2 {
+  void funcBase() {
+    print("this is Base2");
+  }
+}
+
+/// 可以实现一个抽象类
+class Test1 implements Base {
+  @override
+  funcAbstract() {
+    print("this is Test");
+  }
+}
+
+/// 可以把一个实体类当做一个接口来进行实现
+class Test2 implements Base2 {
+  @override
+  void funcBase() {
+    print("this is Test2");
+  }
+}
+
+/// 如Java一样，一个实体类可以实现多个接口
+class Test3 implements Base,Base2{
+  @override
+  void funcBase() {
+    print("this is Base Test3");
+  }
+  @override
+  funcAbstract() {
+    print("this is Base2 Test3");
+  }
+}
+```
+
 ### 类的泛型
+
+在 dart 中也支持泛型，用法与 Java 相似
+
+```dart
+// 泛型
+var names = new List<String>();
+names.add("zhangsan")
+
+var maps = new Map<int, String>();
+maps[1]="value";
+
+// 字面量写法
+var infos = <String>['Seth', 'Kathy', 'Lars'];
+
+var pages = <String, String>{
+  'index.html': 'Homepage',
+  'robots.txt': 'Hints for web robots'
+};
+```
 
 ### dart 中的自定义异常
 
+之前讲过如何在 dart 中进行异常捕获，这里讲一下如何进行自定义异常。在 dart 中，异常是一个接口，可以用上文讲到的如何实现接口的方式来自定义异常。
+
+```dart
+class TestException implements Exception {
+  String errMsg() => '自定义异常';
+}
+
+void is_Exception(int amt) {
+  if (amt <= 0) {
+    throw new TestException();
+  }
+}
+
+void main() {
+  try {
+    is_Exception(-1);
+  } catch (e) {
+    print(e.errMsg()); //输出自定义异常
+  }
+}
+```
+
 ### dart 中如何进行异步编程
+dart与js相同，都属于单线程模型，但是可以在dart中实现异步和多线程。
+
+dart中的所有代码都只在一个线程上运行，但dart代码可以运行在多个isolate上。isolate可以看做一个微小的线程，isolate由虚拟机调度，isolate之间没有共享内存，因此它们之间没有竞争，不需要锁，不用担心死锁，因此开销小，性能高。由于没有共享内存，所以它们之间唯一的通信只能通过Port进行，而且dart中的消息传递也总是异步的。
+
+在dart中主要使用Future对象来实现异步编程。
+
+异步函数即在函数头中包含关键字async的函数。
+- async：用来表示函数是异步的，定义的函数会返回一个Future对象。
+- await：后面跟着一个Future，表示等待该异步任务完成，异步任务完成后才会继续往下执行。await只能出现在异步函数内部。能够让我们可以像写同步代码那样来执行异步任务而不使用回调的方式。
+  
+>在执行完打印后，会开始检查microtask queue中是否有任务，若有则执行，直到microtask queue列队为空。因为microtask queue的优先级是最高的。然后再去执行event queue。一般Future创建的事件会插入event queue顺序执行（使用Future.microtask方法例外）。

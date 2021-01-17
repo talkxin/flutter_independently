@@ -361,7 +361,7 @@ try {
   // 非具体类型
   print('Something really unknown: $e');
 }finally {
-  // 即使抛出一个异常时也会进
+  // 即使抛出一个异常时也会执行
   print("this is finally");
 }
 ```
