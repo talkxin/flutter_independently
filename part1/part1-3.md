@@ -447,3 +447,22 @@ dart中的所有代码都只在一个线程上运行，但dart代码可以运行
 - await：后面跟着一个Future，表示等待该异步任务完成，异步任务完成后才会继续往下执行。await只能出现在异步函数内部。能够让我们可以像写同步代码那样来执行异步任务而不使用回调的方式。
   
 >在执行完打印后，会开始检查microtask queue中是否有任务，若有则执行，直到microtask queue列队为空。因为microtask queue的优先级是最高的。然后再去执行event queue。一般Future创建的事件会插入event queue顺序执行（使用Future.microtask方法例外）。
+
+```dart
+// 导入io库，调用sleep函数
+import 'dart:io';
+
+// 模拟耗时操作，调用sleep函数睡眠2秒
+// 当我们使用了async关键字，意味着函数已经变成了异步函数。
+doTask() async {
+  // await表示等待该异步任务执行完成
+  await sleep(const Duration(seconds: 2));
+  print("Ok");
+}
+
+void main() {
+  print("main start");
+  doTask();
+  print("main end");
+}
+```
