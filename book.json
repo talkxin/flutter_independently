@@ -25,7 +25,7 @@
   ],
   "pluginsConfig": {
     "page-treeview": {
-      "copyright": "Copyright &#169; aleen42",
+      "copyright": "",
       "minHeaderCount": "2",
       "minHeaderDeep": "2"
     },

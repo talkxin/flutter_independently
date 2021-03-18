@@ -4,7 +4,7 @@
 
 在 dart SDK 中，系统库主要分为三类 core（核心类），VM（原生平台库），WEB(网络包)
 
-**CORE**
+#### CORE
 
 核心库主要包含如下内容：
 
@@ -29,7 +29,7 @@
 > dart:typed_data</br>
 > 高效处理固定大小数据（例如无符号的 8 位整型）和 SIMD 数字类型的列表。
 
-**VM**
+#### VM
 
 > dart:io</br>
 > 用于支持非 Web 应用的文件、Socket、HTTP 和其它 I/O 操作。
@@ -40,7 +40,7 @@
 > dart:mirrors</br>
 > 支持检查和动态调用的基本反射功能。
 
-**WEB**
+#### WEB
 
 > dart:html</br>
 >
